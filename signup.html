@@ -238,6 +238,37 @@
         const data = await res.json();
         console.log(data);
     })
+
+    
+    document.querySelector("form-container login-container").addEventListener("submit", async function (event) {
+        event.preventDefault();
+
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        const res = await fetch("http://localhost:3000/user/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                email,
+                password
+            })
+        });
+
+        const data = await res.json();
+        console.log(data);
+    });
+    if (res.ok) {
+      // ✅ Save user details in localStorage
+      // localStorage.setItem("user", JSON.stringify(data.user));
+        localStorage.setItem("userId", data.userId);
+
+      // Redirect to index
+      window.location.href = "index.html";}
+
+
   </script>
 </body>
 </html>
