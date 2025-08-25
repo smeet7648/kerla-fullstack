@@ -54,6 +54,7 @@ body a {
         box-sizing: border-box;
         margin-top: 120px;
     }
+
     .first1 li {
         list-style: none;
     }
@@ -93,32 +94,33 @@ body a {
         height: 30px;
         cursor: pointer;
     }
+
     .account-wrapper {
-    position: relative;
-    display: inline-block;
-}
+        position: relative;
+        display: inline-block;
+    }
 
-.tooltip {
-    position: absolute;
-    top: 35px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: black;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 12px;
-    white-space: nowrap;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.3s;
-    z-index: 1000;
-}
+    .tooltip {
+        position: absolute;
+        top: 35px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: black;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        white-space: nowrap;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s;
+        z-index: 1000;
+    }
 
-.account-wrapper:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
-}
+    .account-wrapper:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
 
     .ph {
         width: 20px;
@@ -568,9 +570,11 @@ body a {
         margin-left: 10px;
         margin-top: -14px;
     }
-    #fix52{
+
+    #fix52 {
         margin-left: -140px;
     }
+
     .bn1 {
         width: 125px;
         height: 35px;
@@ -753,16 +757,19 @@ body a {
         margin-top: 50px;
         gap: 10px;
     }
+
     .ig1 {
         width: 477px;
         height: 400px;
         filter: brightness(0.7);
         z-index: 1;
     }
+
     .ig1:hover {
         filter: brightness(1);
         transition: all 0.3s ease-in-out;
     }
+
     .bp1 {
         width: 120px;
         height: 30px;
@@ -8308,6 +8315,34 @@ body a {
         height: 100vh;
     }
 
+    .account-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+
+    .tooltip {
+        position: absolute;
+        top: 35px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: black;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        white-space: nowrap;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s;
+        z-index: 1000;
+    }
+
+    .account-wrapper:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+
     @keyframes slide {
         0% {
             transform: translateX(0);
@@ -10009,7 +10044,7 @@ body a {
         width: 285px;
     }
 
-    
+
     .tp1,
     .tp2,
     .tp3,
@@ -10146,6 +10181,7 @@ body a {
         margin-left: -253px;
         margin-top: 206px;
     }
+
     .para1 {
         margin-left: 40px;
         font-size: 1.1rem;
@@ -10211,26 +10247,31 @@ body a {
         height: 230px;
     }
 }
+
 @media screen and (max-width:550px) {
     .td1 {
         margin-left: -233px;
         margin-top: 195px;
     }
+
     .bt1 {
         width: 235px;
         font-size: 1.2rem;
     }
+
     .bp1 {
         width: 90px;
         height: 25px;
         margin-left: -230px;
         margin-top: 15px;
-    }    
+    }
+
     .ig1 {
         width: 240px;
         height: 230px;
     }
 }
+
 @media screen and (max-width:543px) {
     .pl3 {
         margin-left: 13px;
@@ -10239,44 +10280,76 @@ body a {
         height: 50px;
         width: 160px;
     }
+
     .bn1 {
         margin-top: 65px;
     }
+
     .pl2 {
         margin-left: 10px;
         margin-top: -40.5px;
     }
+
     .loc1 {
         width: 15px;
         height: 20px;
         margin-left: 10px;
         margin-top: -40px;
     }
+
     .pl1 {
         margin-top: 5px;
         margin-left: 10px;
         height: 110px;
         font-size: 1.3rem;
     }
+
     .il1 {
         width: 230px;
         height: 230px;
     }
-    .sol1, .sol2, .sol3, .sol4 {
+
+    .sol1,
+    .sol2,
+    .sol3,
+    .sol4 {
         width: 230px;
         height: 290px;
     }
-    .pol1, .pol2, .pol3, .pol4, .pol5, .pol6, .pol7, .pol8, .pol9, .pol10, .pol11, .pol12, .pol13, .pol14, .pol15, .pol16, .pol17, .pol18, .pol19, .pol20 {
+
+    .pol1,
+    .pol2,
+    .pol3,
+    .pol4,
+    .pol5,
+    .pol6,
+    .pol7,
+    .pol8,
+    .pol9,
+    .pol10,
+    .pol11,
+    .pol12,
+    .pol13,
+    .pol14,
+    .pol15,
+    .pol16,
+    .pol17,
+    .pol18,
+    .pol19,
+    .pol20 {
         width: 230px;
         height: 490px;
     }
+
     .first2 {
         padding: 0 10px;
     }
+
     .over {
         width: 280px;
         height: 420px;
     }
+
     .tp1,
     .tp2,
     .tp3,
@@ -10285,17 +10358,20 @@ body a {
     .tp6 {
         font-size: 1.3rem;
     }
+
     #fix6 {
         margin-left: -175px;
         margin-top: 64px;
     }
 }
+
 @media screen and (max-width:510px) {
     .bt1 {
         width: 215px;
         font-size: 1.1rem;
         padding-top: 35px;
     }
+
     .bp1 {
         width: 80px;
         height: 25px;
@@ -10303,64 +10379,99 @@ body a {
         margin-top: 15px;
         font-size: 0.9rem;
     }
+
     .ig1 {
         width: 220px;
         height: 220px;
     }
+
     .td1 {
         margin-left: -213px;
         margin-top: 185px;
     }
 }
+
 @media screen and (max-width:490px) {
     .inf2 {
         font-size: 1.6rem;
     }
+
     .py1 {
         width: 390px;
         height: 40px;
     }
 }
+
 @media screen and (max-width:483px) {
-    .pol1, .pol2, .pol3, .pol4, .pol5, .pol6, .pol7, .pol8, .pol9, .pol10, .pol11, .pol12, .pol13, .pol14, .pol15, .pol16, .pol17, .pol18, .pol19, .pol20 {
+
+    .pol1,
+    .pol2,
+    .pol3,
+    .pol4,
+    .pol5,
+    .pol6,
+    .pol7,
+    .pol8,
+    .pol9,
+    .pol10,
+    .pol11,
+    .pol12,
+    .pol13,
+    .pol14,
+    .pol15,
+    .pol16,
+    .pol17,
+    .pol18,
+    .pol19,
+    .pol20 {
         width: 200px;
         height: 430px;
     }
+
     .dt1 {
         width: 80px;
         height: 45px;
     }
+
     .time1 {
         margin-top: 16px;
     }
+
     .dol1 {
         font-size: 0.8rem;
         margin-top: -28px;
     }
+
     .il1 {
         width: 200px;
         height: 180px;
     }
+
     .pl1 {
         margin-top: 5px;
         margin-left: 10px;
         height: 110px;
         font-size: 1.1rem;
     }
+
     .loc1 {
         margin-left: 10px;
         margin-top: -60px;
     }
+
     .pl2 {
         margin-left: 10px;
         margin-top: -60.5px;
     }
+
     .bn1 {
         margin-top: 45px;
     }
+
     .sp1 {
         font-size: 1.4rem;
     }
+
     .pl3 {
         margin-left: 13px;
         margin-top: -116px;
@@ -10368,43 +10479,64 @@ body a {
         width: 130px;
         font-size: 1.3rem;
     }
+
     #fix6 {
         margin-left: -175px;
         margin-top: 44px;
     }
-    .sol1, .sol2, .sol3, .sol4 {
+
+    .sol1,
+    .sol2,
+    .sol3,
+    .sol4 {
         width: 200px;
         height: 290px;
     }
+
     .sd2 {
         font-size: 1.5rem;
     }
+
     .para1 {
         margin-left: 30px;
         font-size: 1rem;
     }
+
     .lan {
         font-size: 1.3rem;
     }
+
     .son1 {
         font-size: 1.3rem;
     }
+
     .son2 {
         font-size: 1rem;
     }
-    .as1, .as2, .as3, .as4 , .as5 , .as6 , .as7 , .as8 {
+
+    .as1,
+    .as2,
+    .as3,
+    .as4,
+    .as5,
+    .as6,
+    .as7,
+    .as8 {
         font-size: 1rem;
     }
+
     .sw1 {
         width: 360px;
         margin-left: -15px;
     }
 }
+
 @media screen and (max-width:470px) {
     .ig1 {
         width: 195px;
         height: 200px;
     }
+
     .bp1 {
         width: 63px;
         height: 21px;
@@ -10412,46 +10544,80 @@ body a {
         margin-top: 15px;
         font-size: 0.8rem;
     }
+
     .bt1 {
         width: 185px;
         font-size: 1rem;
         padding-top: 0px;
         margin-top: -104px;
     }
+
     .td1 {
         margin-left: -188px;
         margin-top: 167px;
         width: 15px;
         height: 16px;
     }
+
     .pb1 {
         margin-top: -37px;
         margin-left: 30px;
         font-size: 0.8rem;
     }
-    .tp1, .tp2, .tp3, .tp4, .tp5, .tp6 {
+
+    .tp1,
+    .tp2,
+    .tp3,
+    .tp4,
+    .tp5,
+    .tp6 {
         font-size: 1.2rem;
     }
+
     .inf1 {
         font-size: 1.3rem;
     }
+
     .inf2 {
         font-size: 1.4rem;
     }
+
     .inf3 {
         font-size: 1rem;
         margin-top: -10px;
     }
 }
+
 @media screen and (max-width:423px) {
     .dt1 {
         width: 141px;
         height: 32px;
     }
-    .pol1, .pol2, .pol3, .pol4, .pol5, .pol6, .pol7, .pol8, .pol9, .pol10, .pol11, .pol12, .pol13, .pol14, .pol15, .pol16, .pol17, .pol18, .pol19, .pol20 {
+
+    .pol1,
+    .pol2,
+    .pol3,
+    .pol4,
+    .pol5,
+    .pol6,
+    .pol7,
+    .pol8,
+    .pol9,
+    .pol10,
+    .pol11,
+    .pol12,
+    .pol13,
+    .pol14,
+    .pol15,
+    .pol16,
+    .pol17,
+    .pol18,
+    .pol19,
+    .pol20 {
         width: 310px;
         height: 480px;
     }
+
     /* .dol1 {
         font-size: 0.9rem;
         margin-top: -20px;
@@ -10460,34 +10626,42 @@ body a {
         font-size: 0.9rem;
         margin-top: -17px;
     }
+
     .time1 {
         margin-top: 8px;
     }
+
     .il1 {
         width: 310px;
         height: 240px;
     }
+
     .pl1 {
         margin-top: 5px;
         margin-left: 10px;
         height: 150px;
         font-size: 1.45rem;
     }
-    #pro1{
+
+    #pro1 {
         width: 280px;
     }
+
     .loc1 {
         margin-left: 10px;
         margin-top: -65px;
     }
+
     .pl2 {
         margin-left: 10px;
         margin-top: -63px;
         height: 20px;
     }
+
     .bn1 {
         margin-top: -5px;
     }
+
     /* .pl3 {
         margin-left: -127px;
         margin-top: -43px;
@@ -10502,31 +10676,40 @@ body a {
         width: 280px;
         font-size: 1.4rem;
     }
-    .sol1, .sol2, .sol3, .sol4 {
+
+    .sol1,
+    .sol2,
+    .sol3,
+    .sol4 {
         width: 320px;
         height: 170px;
     }
+
     .pb1 {
         margin-top: -37.5px;
         margin-left: 40px;
         font-size: 1rem;
     }
+
     .bt1 {
         width: 315px;
         font-size: 1.3rem;
         padding-top: 0px;
         margin-top: -104px;
     }
+
     .td1 {
         margin-left: -313px;
         margin-top: 256px;
         width: 20px;
         height: 20px;
     }
+
     .ig1 {
         width: 320px;
         height: 290px;
     }
+
     .bp1 {
         width: 93px;
         height: 26px;
@@ -10534,96 +10717,131 @@ body a {
         margin-top: 15px;
         font-size: 0.95rem;
     }
-    .tp1, .tp2, .tp3, .tp4, .tp5, .tp6 {
+
+    .tp1,
+    .tp2,
+    .tp3,
+    .tp4,
+    .tp5,
+    .tp6 {
         margin-left: 20px;
     }
+
     .con4 {
         width: 250px;
     }
-    .pg1, .pg2, .pg3, .pg4, .pg5, .pg6 {
+
+    .pg1,
+    .pg2,
+    .pg3,
+    .pg4,
+    .pg5,
+    .pg6 {
         width: 220px;
     }
+
     .lo4 {
         margin-left: -67px;
     }
+
     .sid2 {
         width: 280px;
     }
+
     .py1 {
         width: 360px;
         height: 35px;
     }
+
     #son5 {
         margin-top: -30px;
     }
+
     #son6 {
         margin-top: -22px;
     }
+
     #son7 {
         margin-top: -25px;
     }
+
     #fix6 {
         margin-left: -165px;
         margin-top: -6px;
     }
+
     #fix0 {
         margin-left: 20px;
         margin-top: -75px;
     }
+
     #fix5 {
         margin-left: -85px;
     }
-    #fix8{
+
+    #fix8 {
         margin-left: 20px;
         margin-top: -75px;
     }
-    #fix7{
+
+    #fix7 {
         margin-left: 25px;
         margin-top: -80px;
     }
+
     #kt1 {
         margin-left: 5px;
         margin-top: -25px;
     }
+
     #kt2 {
         margin-left: 5px;
         margin-top: -25px;
     }
+
     #fix52 {
         margin-left: -130px;
         margin-top: 44px;
     }
+
     #fix3 {
         margin-left: 20px;
         margin-top: -81px;
     }
+
     #fix4 {
         margin-left: -130px;
         margin-top: 6px;
     }
 }
+
 @media screen and (max-width:412px) {
     .para1 {
         margin-left: 20px;
         font-size: 0.9rem;
     }
+
     .lan {
         font-size: 1.1rem;
     }
+
     .sd2 {
         font-size: 1.25rem;
     }
 }
+
 @media screen and (max-width:398px) {
     .inf2 {
         font-size: 1.3rem;
     }
 }
+
 @media screen and (max-width:381px) {
     .py1 {
         width: 330px;
         height: 30px;
     }
+
     /* .lo1 {
         width: 210px;
         height: 70px;
@@ -10636,15 +10854,23 @@ body a {
         margin-top: -9px;
     }
 }
+
 @media screen and (max-width:351px) {
     .py1 {
         width: 290px;
         height: 30px;
     }
+
     .sto1 {
         height: 810px;
     }
-    .tp1, .tp2, .tp3, .tp4, .tp5, .tp6 {
+
+    .tp1,
+    .tp2,
+    .tp3,
+    .tp4,
+    .tp5,
+    .tp6 {
         margin-left: 40px;
     }
 }
