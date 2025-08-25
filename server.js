@@ -27,8 +27,6 @@ const userSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", userSchema);
 
-
-
 app.post("/user", async (req, res) => {
 try{
     const { name, email,phone, password } = req.body; 
@@ -44,7 +42,7 @@ try{
   }
 });
 
-app.post("/user/login", async (req, res) => {
+app.post("/login", async (req, res) => {
   try {
     const { email, password } = req.body;
 
