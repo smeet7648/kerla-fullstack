@@ -1,274 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kerala Travel - Auth</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerala Travel - Auth</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
 
-    body {
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #2E8B57, #006400);
-    }
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #2E8B57, #006400);
+        }
 
-    .container {
-      position: relative;
-      width: 900px;
-      height: 550px;
-      background: #fff;
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-      display: flex;
-    }
+        .container {
+            position: relative;
+            width: 900px;
+            height: 550px;
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            display: flex;
+        }
 
-    .form-container {
-      position: absolute;
-      top: 0;
-      height: 100%;
-      transition: all 0.6s ease-in-out;
-    }
+        .form-container {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            transition: all 0.6s ease-in-out;
+        }
 
-    .sign-up-container {
-      left: 0;
-      width: 50%;
-      opacity: 0;
-      z-index: 1;
-    }
+        .sign-up-container {
+            left: 0;
+            width: 50%;
+            opacity: 0;
+            z-index: 1;
+        }
 
-    .login-container {
-      left: 0;
-      width: 50%;
-      z-index: 2;
-    }
+        .login-container {
+            left: 0;
+            width: 50%;
+            z-index: 2;
+        }
 
-    form {
-      background: #fff;
-      display: flex;
-      flex-direction: column;
-      padding: 60px 40px;
-      height: 100%;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-    }
+        form {
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 60px 40px;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
 
-    form h1 {
-      margin-bottom: 20px;
-      color: #2E8B57;
-    }
+        form h1 {
+            margin-bottom: 20px;
+            color: #2E8B57;
+        }
 
-    input {
-      background: #f0f0f0;
-      border: none;
-      padding: 15px;
-      margin: 8px 0;
-      width: 100%;
-      border-radius: 10px;
-      font-size: 14px;
-    }
+        input {
+            background: #f0f0f0;
+            border: none;
+            padding: 15px;
+            margin: 8px 0;
+            width: 100%;
+            border-radius: 10px;
+            font-size: 14px;
+        }
 
-    button {
-      border-radius: 10px;
-      border: none;
-      background: #2E8B57;
-      color: #fff;
-      font-size: 14px;
-      padding: 12px 45px;
-      margin-top: 15px;
-      cursor: pointer;
-      transition: 0.3s;
-    }
+        button {
+            border-radius: 10px;
+            border: none;
+            background: #2E8B57;
+            color: #fff;
+            font-size: 14px;
+            padding: 12px 45px;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
 
-    button:hover {
-      background: #228B22;
-    }
+        button:hover {
+            background: #228B22;
+        }
 
-    .overlay-container {
-      position: absolute;
-      top: 0;
-      left: 50%;
-      width: 50%;
-      height: 100%;
-      overflow: hidden;
-      transition: transform 0.6s ease-in-out;
-      z-index: 100;
-    }
+        .overlay-container {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 50%;
+            height: 100%;
+            overflow: hidden;
+            transition: transform 0.6s ease-in-out;
+            z-index: 100;
+        }
 
-    .overlay {
-      background: linear-gradient(135deg, #2E8B57, #006400);
-      color: #fff;
-      position: relative;
-      left: -100%;
-      height: 100%;
-      width: 200%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.6s ease-in-out;
-    }
+        .overlay {
+            background: linear-gradient(135deg, #2E8B57, #006400);
+            color: #fff;
+            position: relative;
+            left: -100%;
+            height: 100%;
+            width: 200%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.6s ease-in-out;
+        }
 
-    .overlay-panel {
-      position: absolute;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      top: 0;
-      height: 100%;
-      width: 50%;
-      padding: 0 40px;
-    }
+        .overlay-panel {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            top: 0;
+            height: 100%;
+            width: 50%;
+            padding: 0 40px;
+        }
 
-    .overlay-left {
-      transform: translateX(-20%);
-      left: 0;
-    }
+        .overlay-left {
+            transform: translateX(-20%);
+            left: 0;
+        }
 
-    .overlay-right {
-      right: 0;
-      transform: translateX(20%);
-    }
+        .overlay-right {
+            right: 0;
+            transform: translateX(20%);
+        }
 
-    .container.right-panel-active .login-container {
-      transform: translateX(100%);
-    }
+        .container.right-panel-active .login-container {
+            transform: translateX(100%);
+        }
 
-    .container.right-panel-active .sign-up-container {
-      transform: translateX(100%);
-      opacity: 1;
-      z-index: 5;
-    }
+        .container.right-panel-active .sign-up-container {
+            transform: translateX(100%);
+            opacity: 1;
+            z-index: 5;
+        }
 
-    .container.right-panel-active .overlay-container {
-      transform: translateX(-100%);
-    }
+        .container.right-panel-active .overlay-container {
+            transform: translateX(-100%);
+        }
 
-    .container.right-panel-active .overlay {
-      transform: translateX(50%);
-    }
-
-  </style>
+        .container.right-panel-active .overlay {
+            transform: translateX(50%);
+        }
+    </style>
 </head>
+
 <body>
-  <div class="container" id="container">
-    <!-- Sign Up -->
-    <div class="form-container sign-up-container">
-      <form>
-        <h1>Create Account</h1>
-        <input type="text" placeholder="Full Name" id="name" required />
-        <input type="email" placeholder="Email" id="email" required />
-        <input type="tel" placeholder="Phone" id="phone" required />
-        <input type="password" placeholder="Password" id="password" required />
-        <button>Sign Up</button>
-      </form>
-    </div>
-
-    <!-- Login -->
-    <div class="form-container login-container">
-      <form>
-        <h1>Login</h1>
-        <input type="email" placeholder="Email" required />
-        <input type="password" placeholder="Password" required />
-        <button>Log In</button>
-      </form>
-    </div>
-
-    <!-- Overlay -->
-    <div class="overlay-container">
-      <div class="overlay">
-        <div class="overlay-panel overlay-left">
-          <h1>Welcome Back!</h1>
-          <p>Already have an account? Log in here</p>
-          <button class="ghost" id="loginBtn">Login</button>
+    <div class="container" id="container">
+        <!-- Sign Up -->
+        <div class="form-container sign-up-container">
+            <form>
+                <h1>Create Account</h1>
+                <input type="text" placeholder="Full Name" id="name" required />
+                <input type="email" placeholder="Email" id="email" required />
+                <input type="tel" placeholder="Phone" id="phone" required />
+                <input type="password" placeholder="Password" id="password" required />
+                <button>Sign Up</button>
+            </form>
         </div>
-        <div class="overlay-panel overlay-right">
-          <h1>Hello, Traveler!</h1>
-          <p>Don't have an account? Sign up here</p>
-          <button class="ghost" id="signupBtn">Sign Up</button>
+
+        <!-- Login -->
+        <div class="form-container login-container">
+            <form>
+                <h1>Login</h1>
+                <input type="email" placeholder="Email" required />
+                <input type="password" placeholder="Password" required />
+                <button>Log In</button>
+            </form>
         </div>
-      </div>
+
+        <!-- Overlay -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Welcome Back!</h1>
+                    <p>Already have an account? Log in here</p>
+                    <button class="ghost" id="loginBtn">Login</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Hello, Traveler!</h1>
+                    <p>Don't have an account? Sign up here</p>
+                    <button class="ghost" id="signupBtn">Sign Up</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <script>
-    const container = document.getElementById('container');
-    const signupBtn = document.getElementById('signupBtn');
-    const loginBtn = document.getElementById('loginBtn');
+    <script>
+        const container = document.getElementById('container');
+        const signupBtn = document.getElementById('signupBtn');
+        const loginBtn = document.getElementById('loginBtn');
 
-    signupBtn.addEventListener('click', () => {
-      container.classList.add("right-panel-active");
-    });
-
-    loginBtn.addEventListener('click', () => {
-      container.classList.remove("right-panel-active");
-    });
-
-    document.querySelector("form-container sign-up-container").addEventListener("submit", async function (event) {
-        event.preventDefault();
-
-        const name  = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const phone = document.getElementById("phone").value;
-        const password = document.getElementById("password").value;
-
-        const res = await fetch("http://localhost:3000/user", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                name,
-                email,
-                phone,
-                password
-            })
+        signupBtn.addEventListener('click', () => {
+            container.classList.add("right-panel-active");
         });
 
-        const data = await res.json();
-        console.log(data);
-    })
-
-    
-    document.querySelector("form-container login-container").addEventListener("submit", async function (event) {
-        event.preventDefault();
-
-        const email = document.getElementById("email").value;
-        const password = document.getElementById("password").value;
-
-        const res = await fetch("http://localhost:3000/user/login", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                email,
-                password
-            })
+        loginBtn.addEventListener('click', () => {
+            container.classList.remove("right-panel-active");
         });
 
-        const data = await res.json();
-        console.log(data);
-    });
-    if (res.ok) {
-      // ✅ Save user details in localStorage
-      // localStorage.setItem("user", JSON.stringify(data.user));
-        localStorage.setItem("userId", data.userId);
+        document.querySelector("form-container sign-up-container").addEventListener("submit", async function (event) {
+            event.preventDefault();
 
-      // Redirect to index
-      window.location.href = "index.html";}
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const password = document.getElementById("password").value;
+
+            const res = await fetch("http://localhost:3000/user", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    name,
+                    email,
+                    phone,
+                    password
+                })
+            });
+
+            const data = await res.json();
+            console.log(data);
+        })
 
 
-  </script>
+        document.querySelector("form-container login-container").addEventListener("submit", async function (event) {
+            event.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+
+            const res = await fetch("http://localhost:3000/user/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    email,
+                    password
+                })
+            });
+
+            const data = await res.json();
+            console.log(data);
+
+            if (res.ok) {
+                // ✅ Save user details in localStorage
+                // localStorage.setItem("user", JSON.stringify(data.user));
+                localStorage.setItem("userId", data.userId);
+
+                // Redirect to index
+                window.location.href = "index.html";
+            }
+        });
+
+
+    </script>
 </body>
+
 </html>
