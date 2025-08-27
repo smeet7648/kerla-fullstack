@@ -20,3 +20,7 @@ document.getElementById("close4").addEventListener("click", function () {
     document.getElementById("open4").style.display = "block";
     document.getElementById("close4").style.display = "none";
 });
+
+function booking(name,location,price){
+    window.location.herf = `main.html?name=${encodeURIComponent(name)}&location=${encodeURIComponent(location)}&price=${encodeURIComponent(price)}`
+}
