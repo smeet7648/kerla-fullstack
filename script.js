@@ -32,17 +32,20 @@ document.querySelectorAll(".btn1").forEach(el => {
         const title = el.parentElement.querySelector(".pl1").textContent;
         const location = el.parentElement.querySelector(".pl2").textContent;
         const price = el.parentElement.querySelector(".sp1").textContent;
-        const img = el.parentElement.querySelector(".il1").getAttribute("src");
+        // const img = el.parentElement.querySelector(".il1").getAttribute("src");
 
         try {
             const res = await fetch("http://localhost:3000/booking", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ title, location, price, img })
+                body: JSON.stringify({ title, location, price })
             });
 
             if (!res.ok) {
                 throw new Error(`HTTP error! status: ${res.status}`);
+            }
+            else{
+                alert("Booking successful!");
             }
         } catch (error) {
             console.error("Error:", error);

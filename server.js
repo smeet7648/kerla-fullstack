@@ -20,14 +20,26 @@ const userSchema = new mongoose.Schema({
   email: { type: String, unique: true },
   phone: String,
   password: String,
-  img:src,
   title: String,
   location: String,
-  description: String,
   price: String
 });
 
 const User = mongoose.model("User", userSchema);
+
+// booking
+
+app.post("/booking", async (req, res) => {
+  try {
+    const { title, location, price } = req.body;
+    const booking = new Booking({ title, location, price });
+    await booking.save();
+    res.status(201).json({ message: "Booking created successfully" });
+  } catch (error) {
+    console.error("Error creating booking:", error);
+    res.status(500).json({ error: "Internal server error" });
+  }
+});
 
 // Register User
 app.post("/user", async (req, res) => {
