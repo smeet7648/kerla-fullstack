@@ -20,6 +20,11 @@ const userSchema = new mongoose.Schema({
   email: { type: String, unique: true },
   phone: String,
   password: String,
+  img:src,
+  title: String,
+  location: String,
+  description: String,
+  price: String
 });
 
 const User = mongoose.model("User", userSchema);
