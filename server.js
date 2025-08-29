@@ -32,8 +32,8 @@ const User = mongoose.model("User", userSchema);
 app.post("/booking", async (req, res) => {
   try {
     const { title, location, price } = req.body;
-    const booking = new Booking({ title, location, price });
-    await booking.save();
+    const User = new User({ title, location, price });
+    await User.save();
     res.status(201).json({ message: "Booking created successfully" });
   } catch (error) {
     console.error("Error creating booking:", error);
